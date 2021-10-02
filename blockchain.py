@@ -53,16 +53,23 @@ class Blockchain:
                 return False
             prev_block = block
             block += 1
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        return True
         
         
 #mine a blockchain
+
+#Create a web app
+app = Flask(__name__)
+
+#Create a blockchain
+
+
+
+
+
+
+
+
+
+
+
