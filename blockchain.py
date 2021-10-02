@@ -39,7 +39,20 @@ class Blockchain:
         return hashlib.sha256(encoded_block).hexdigest()
      
         
-        
+    def is_chain_valid(self, chain):
+        prev_block = chain[-1]
+        block_index = 1
+        while block_index < len(chain):
+            block = chain[block_index]
+            if block['prev_hash' ] !=  self.hash(previous_hash):
+                return False
+            prev_proof = prev_block['proof']
+            proof = block['proof'] 
+            hash_operation = hashlib.sha256(str((proof**2 - previous_proof**2).encode()).hexdigest()
+            if hash_operation[:4] != '0000':
+                return False
+            prev_block = block
+            block += 1
         
         
         
