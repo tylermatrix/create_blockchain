@@ -17,5 +17,9 @@ class Blockchain:
                  'proof' : proof,
                  'prev_hash' : prev_hash
                  }
-
+        self.chain.append(block)
+        return block
+    
+    def get_prev_block(self):
+        return self.chain[-1]
 #mine a blockchain
